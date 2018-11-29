@@ -1,9 +1,11 @@
 import axios from "axios";
 
-export function getStories() {
+export function getStories(searchQuery) {
   return dispatch => {
     return axios
-      .get(`http://hn.algolia.com/api/v1/search?query=react&tags=story`)
+      .get(
+        `http://hn.algolia.com/api/v1/search?query=${searchQuery}&tags=story`
+      )
       .then(response => {
         let storiesArray = [];
         for (let i = 0; i < 5; i++) {
@@ -12,7 +14,6 @@ export function getStories() {
             author: response.data.hits[i].author,
             url: response.data.hits[i].url
           };
-          //   let storyObject = `${response.data.hits[i].title}`;
           storiesArray.push(storyObject);
           console.log(`Stories Array[${i}]: ${storiesArray[i]}`);
           if (i === 4) {
@@ -25,7 +26,7 @@ export function getStories() {
 
 export function setStories(stories) {
   return {
-    type: "CHANGE_COLOR",
+    type: "SET_STORIES",
     stories: [stories]
   };
 }

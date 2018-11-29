@@ -6,11 +6,13 @@ let defaultState = {
 };
 
 const mainReducer = (state = defaultState, action) => {
-  if (action.type === "CHANGE_COLOR") {
+  if (action.type === "SET_STORIES") {
     return {
       ...state,
       stories: action.stories[0]
     };
+  } else if (action.type === "GET_STORIES") {
+    return Object.assign({}, state, { searchQuery: action.searchQuery });
   } else {
     return {
       ...state
