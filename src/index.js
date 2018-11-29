@@ -4,14 +4,14 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers/index.js";
-import Boxcon from "./container/box-container.js";
+import Container from "./container/box-container.js";
 import "./index.css";
 
 let store = createStore(reducers, applyMiddleware(thunk));
 
 class App extends React.Component {
   render() {
-    return <Boxcon />;
+    return <Container />;
   }
 }
 

@@ -2,7 +2,7 @@ let defaultState = {
   stories: [
     { title: "Search Hacker News for stories!", author: "Sam Hall", url: "N/A" }
   ],
-  searchQuery: "Search query"
+  searchQuery: ""
 };
 
 const mainReducer = (state = defaultState, action) => {

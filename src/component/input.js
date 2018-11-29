@@ -6,6 +6,7 @@ function Input(props) {
     <div>
       <input
         name="searchQuery"
+        placeholder="Type something"
         value={props.searchQuery}
         onChange={props.inputChanged}
       />
