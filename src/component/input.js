@@ -10,7 +10,6 @@ function Input(props) {
         value={props.searchQuery}
         onChange={props.inputChanged}
       />
-      <p>{props.searchQuery}</p>
     </div>
   );
 }
