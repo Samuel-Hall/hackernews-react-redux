@@ -8,7 +8,12 @@ class Box extends React.Component {
         <div key={index}>
           <h3>Title: {story.title}</h3>
           <h4>Author: {story.author}</h4>
-          <h4>URL: {story.url}</h4>
+          <h4>
+            URL:{" "}
+            <a href={story.url} target="_blank" rel="noopener">
+              {story.url}
+            </a>
+          </h4>
           <p>---------------------------------</p>
         </div>
       );
