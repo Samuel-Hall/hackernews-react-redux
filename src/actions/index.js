@@ -4,7 +4,7 @@ export function getStories(searchQuery) {
   return dispatch => {
     return axios
       .get(
-        `http://hn.algolia.com/api/v1/search?query=${searchQuery}&tags=story`
+        `https://hn.algolia.com/api/v1/search?query=${searchQuery}&tags=story`
       )
       .then(response => {
         let storiesArray = [];
