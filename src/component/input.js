@@ -34,6 +34,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    //   Save user input search query to state
     inputChanged: event => {
       const action = { type: "GET_STORIES", searchQuery: event.target.value };
       dispatch(action);

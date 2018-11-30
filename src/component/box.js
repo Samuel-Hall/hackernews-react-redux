@@ -3,6 +3,7 @@ import Input from "./input";
 
 class Box extends React.Component {
   render() {
+    //   Get stories from state, iterate through array of story objects, organize them on the page.
     var storiesList = this.props.stories.map(function(story, index) {
       return (
         <div className="story" key={index}>
@@ -20,10 +21,12 @@ class Box extends React.Component {
     return (
       <div className="wrapper">
         <div className="box">
+          {/* Input form area */}
           <Input
             handleClick={this.props.handleClick}
             searchQuery={this.props.searchQuery}
           />
+          {/* List of results */}
           <div className="storyList">{storiesList}</div>
         </div>
       </div>
