@@ -21,3 +21,10 @@ button {
   font-family: sans-serif;
   text-transform: uppercase;
 }
+
+.story {
+  width: 100%;
+  border-bottom: solid 2px;
+  margin: 2px;
+  background-color: bisque;
+}

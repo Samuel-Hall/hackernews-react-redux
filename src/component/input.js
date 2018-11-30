@@ -5,13 +5,13 @@ function Input(props) {
   return (
     <div>
       <form>
-        <label htmlFor="searchQuery">Search Hacker News:</label>
+        <label htmlFor="searchQuery">Search Hacker News: </label>
         <input
           name="searchQuery"
           placeholder="Type something"
           value={props.searchQuery}
           onChange={props.inputChanged}
-        />
+        />{" "}
         <button
           type="submit"
           onClick={event => {

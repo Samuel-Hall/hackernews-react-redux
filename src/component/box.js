@@ -5,16 +5,15 @@ class Box extends React.Component {
   render() {
     var storiesList = this.props.stories.map(function(story, index) {
       return (
-        <div key={index}>
+        <div className="story" key={index}>
           <h3>Title: {story.title}</h3>
           <h4>Author: {story.author}</h4>
           <h4>
             URL:{" "}
-            <a href={story.url} target="_blank" rel="noopener">
+            <a href={story.url} rel="noreferrer noopener" target="_blank">
               {story.url}
             </a>
           </h4>
-          <p>---------------------------------</p>
         </div>
       );
     });
