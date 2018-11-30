@@ -4,12 +4,24 @@ import connect from "react-redux/lib/connect/connect";
 function Input(props) {
   return (
     <div>
-      <input
-        name="searchQuery"
-        placeholder="Type something"
-        value={props.searchQuery}
-        onChange={props.inputChanged}
-      />
+      <form>
+        <label htmlFor="searchQuery">Search Hacker News:</label>
+        <input
+          name="searchQuery"
+          placeholder="Type something"
+          value={props.searchQuery}
+          onChange={props.inputChanged}
+        />
+        <button
+          type="submit"
+          onClick={event => {
+            event.preventDefault();
+            props.handleClick(props.searchQuery);
+          }}
+        >
+          Search
+        </button>
+      </form>
     </div>
   );
 }

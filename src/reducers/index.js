@@ -1,6 +1,10 @@
 let defaultState = {
   stories: [
-    { title: "Search Hacker News for stories!", author: "Sam Hall", url: "N/A" }
+    {
+      title: "Search Hacker News for stories!",
+      author: "Samuel Hall",
+      url: "N/A"
+    }
   ],
   searchQuery: ""
 };

@@ -16,18 +16,10 @@ class Box extends React.Component {
     return (
       <div className="wrapper">
         <div className="box">
-          {/* <form> */}
-          <label htmlFor="searchQuery">Search Hacker News:</label>
-          <Input />
-          <button
-            type="submit"
-            onClick={() => {
-              this.props.handleClick(this.props.searchQuery);
-            }}
-          >
-            Search
-          </button>
-          {/* </form> */}
+          <Input
+            handleClick={this.props.handleClick}
+            searchQuery={this.props.searchQuery}
+          />
           <div className="storyList">{storiesList}</div>
         </div>
       </div>
