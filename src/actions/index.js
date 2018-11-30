@@ -15,7 +15,6 @@ export function getStories(searchQuery) {
             url: response.data.hits[i].url
           };
           storiesArray.push(storyObject);
-          console.log(`Stories Array[${i}]: ${storiesArray[i]}`);
           if (i === 4) {
             dispatch(setStories(storiesArray));
           }
